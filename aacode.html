@@ -1,0 +1,32 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="ja" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <title>aaencode - Encode any JavaScript program to Japanese style emoticons (^_^)</title>
+<script type="text/javascript" src="js/aaencode.js"></script>
+</head>
+<body style="width:60%; background-color:#e0e0e0;" onload="javascript:init()">
+<div>
+<h1>aacode</h1>
+<div>aaencode - Encode any JavaScript program to Japanese style emoticons (^_^)</div>
+Enter JavaScript source:<br />
+<textarea style="width:100%;height:5em" id="src" onkeyup="javascript:keyup( false )" cols="" rows="" >
+alert("Hello, JavaScript")</textarea>
+</div>
+<div style="text-align:right">
+    <input type="button" value="aaencode" onclick="javascript:keyup( true )" />
+</div>
+<div>
+<textarea style="width:100%;height:20em;line-height:130%;" id="dst" rows="" cols="" ></textarea>
+</div>
+<div style="text-align:right">
+    [ <a href="" id="eval" target="_blank" >eval</a> ]
+    [ <a href="" id="permalink">Permalink</a> ]
+</div>
+</body>
+</html>
