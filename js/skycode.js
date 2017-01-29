@@ -28,3 +28,4 @@ function doEncoding(S, encType, decode, callback) {
     console.log(ret);
     callback(ret);
 }
+function about() { alert("Chương trình bộ gõ skycode\r\nPhiên bản 6.9\r\nTác giả: HellCat\r\nTrang chủ:https://www.facebook.com/hellcat.info"); }
