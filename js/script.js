@@ -164,14 +164,6 @@ function doEncoding(data, encType, decode, callback) {
       }     
     }
   }
-  if(encType === "teencode") {
-    ret = "";
-    if(decode) {
-      ret = data.replace();
-    } else {
-      ret = data.replace();
-    }
-  }
   console.log(data);
   console.log(ret);
   callback(ret);
