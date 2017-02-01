@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Công Cụ Mã Hóa-Hell Cat VN</title>
@@ -10,7 +11,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/mahoa.css">
-    <meta content='https://avatars0.githubusercontent.com/u/17523567' property='og:image'/>  
+    <script src="js/jjencode.js"></script>
+    <meta content='https://avatars0.githubusercontent.com/u/17523567' property='og:image' />
+    <script type="text/javascript" src="js/hellcatvn.js"></script>
+    <script src="js/ZeroClipboard.js"></script>
     <script language="JavaScript">
     <!-- 
     var space = " ";
@@ -31,7 +35,6 @@
 
 <body>
     <div class="container-full">
-    	<!--menu-->
         <nav class="navbar navbar-default navbar-light navbar-fixed-top">
             <div class="container">
                 <button class="navbar-toggler hidden-sm-up pull-xs-right" type="button" data-toggle="collapse" data-target="#mainmenu"> ☰</button>
@@ -48,18 +51,18 @@
         </nav>
         <!--Like Page-->
         <div class="alert alert-success" role="alert">
-            <strong >Chào mừng đến với website!<br>Hãy like để tạo động lực cho mình phát triển website.</strong>
+            <strong>Chào mừng đến với website!<br>Hãy like để tạo động lực cho mình phát triển website.</strong>
             <iframe class="pull-sm-right" src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FHellCatVN&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId=872124522927373" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-        </div>		
+        </div>
         <div class="row">
             <div class="col-sm-2 col-md-2">
                 <div class="panel-group" id="accordion">
                     <div class="panel panel-default">
-                    	<div class="panel-heading">
-                    		<h5 class="panel-title" style="color: red;">
-							<span class="glyphicon glyphicon-heart-empty">
+                        <div class="panel-heading">
+                            <h5 class="panel-title" style="color: red;">
+                            <span class="glyphicon glyphicon-heart-empty">
                             </span>Multiple-Encode-Tools
-                    	</div>
+                        </div>
                         <div class="panel-heading">
                             <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-heart">
@@ -152,17 +155,7 @@
                                         <td>
                                             <span class="glyphicon glyphicon-pencil text-warning"></span><a href="unicode.html">Unicode</a>
                                         </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span class="glyphicon glyphicon-pencil text-danger"></span><a href="aacode.html">AAcode</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <span class="glyphicon glyphicon-pencil text-danger"></span><a href="jjcode.html">JJcode</a>
-                                        </td>
-                                    </tr>                                                                  
+                                    </tr>                               
                                 </table>
                             </div>
                         </div>
@@ -199,6 +192,32 @@
             <div class="col-sm-10 col-md-10" id="noidung">
                 <h1>Công Cụ Mã Hóa</h1>
                 <div class="container">
+                    <div class="container">
+                        <div class="col-md-6">
+                            <h4>JJcode encoding</h4>
+                            <textarea class="form-control" rows="5" data-type="encode" data-id="html" id="aaencode" onclick="javascript:keyup(true)" onkeyup="javascript:keyup( false )"></textarea>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>JJCode decoding</h4>
+                            <textarea class="form-control" rows="5" data-type="decode" data-id="html" id="jjdecode_encoded" onclick="javascript:jjdecode()" onkeyup="javascript:jjdecode()"></textarea>
+                        </div>
+                    </div>
+                    <div class="container ">
+                        <label for="var">global variable name used by jjencode : </label>
+                        <input type="text" id="var" value="$" onkeyup="javascript:keyup( false )">
+                        <input type="checkbox" id="palindrome" onclick="javascript:keyup( false )">
+                        <label for="palindrome">palindrome</label>
+                    </div>
+                    <div class="container ">
+                        <hr>
+                        <pre><textarea class="form-control" rows="15" onclick="this.focus();this.select();" id="dst"></textarea></pre>
+                    </div>
+                    <div class="container ">
+                        <span id="letters"></span> letters
+                    </div>
+                    <div class="text-center">
+                    <button type="button" class="btn btn-success" onclick="about()">About</button>
+                    </div>
                 </div>
             </div>
         </div>
